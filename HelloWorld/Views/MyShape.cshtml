@@ -1,0 +1,26 @@
+﻿@{
+    Style.Include("somestylesheet.css");
+    Script.Require("jQuery");
+    Script.Include("somescript.js");
+    using(Script.Foot()) {
+        <script type="text/javascript">
+            $(function () {
+                // Do stuff
+            })
+        </script>
+    }
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>in my shape</title>
+            @{
+                Style.Include("mystyle.css");
+            }
+
+@*    <link rel="stylesheet" media="screen" type="text/css" href="mystyle.css" />*@
+</head>
+<body>
+<h1>shape 22</h1>
+</body>
+</html>

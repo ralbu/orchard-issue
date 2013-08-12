@@ -1,0 +1,25 @@
+﻿@*@Display(New.MyShape(Text: "someText", SomeProperty: "someObject"))*@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+@*    This works*@
+@*    <link rel="stylesheet" media="screen" type="text/css" href="./Modules/HelloWorld/Styles/mystyle.css" />*@
+    
+    
+    @{
+   // This works
+@*    <link href="@Url.Content("~/Modules/HelloWorld/Styles/mystyle.css")" rel="stylesheet" type="text/css" />*@
+    // This doesn't work
+        Style.Include("~/Modules/HelloWorld/Styles/mystyle.css");
+    }
+    
+</head>
+<body>
+    <h1>Index from shape</h1>
+    <div>@Model.Foo is the answer.</div>
+</body>
+</html>
